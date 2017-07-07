@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 
 import { RouterModule } from "@angular/router";
 
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from "@angular/platform-browser";
 
 
 import HomeModule from "./home/home.module";
@@ -16,10 +16,6 @@ import HomeComponent from "./home/home.component";
 import LoginComponent from "./login/login.component";
 
 
-import AuthService from "./shared/auth.service";
-
-import LoginGuard from "./shared/guards/login.guard";
-
 
 @NgModule({
 
@@ -31,15 +27,15 @@ import LoginGuard from "./shared/guards/login.guard";
 
         RouterModule.forRoot([
 
-            {
+            // {
 
-                path: "home",
+            //     path: "home",
 
-                component: HomeComponent,
+            //     component: HomeComponent,
 
-                canActivate: [ LoginGuard ],
+            //     canActivate: [ LoginGuard ],
 
-            },
+            // },
 
             {
 
@@ -71,7 +67,7 @@ import LoginGuard from "./shared/guards/login.guard";
 
     declarations: [ AppComponent, LoginComponent ],
 
-    providers: [ AuthService, LoginGuard ],
+    providers: [  ],
 
     bootstrap: [ AppComponent ],
 

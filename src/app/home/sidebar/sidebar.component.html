@@ -3,7 +3,7 @@
 
     <ul class="sidebar">
 
-        <li>
+        <li [routerLink]="['/home/books']">
             
             <span class="ion-ios-albums"></span>
             
@@ -21,7 +21,8 @@
 
         </li>
 
-        <li class="sidebar-devider">
+        <li class="sidebar-devider"
+            [routerLink]="['/home/books/create']">
 
             <span class="ion-md-add"></span>
 
