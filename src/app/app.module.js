@@ -6,6 +6,9 @@ import { RouterModule } from "@angular/router";
 import { BrowserModule } from '@angular/platform-browser';
 
 
+import HomeModule from "./home/home.module";
+
+
 import AppComponent from "./app.component";
 
 import HomeComponent from "./home/home.component";
@@ -23,6 +26,8 @@ import LoginGuard from "./shared/guards/login.guard";
     imports: [ 
 
         BrowserModule,
+
+        HomeModule,
 
         RouterModule.forRoot([
 
@@ -55,6 +60,7 @@ import LoginGuard from "./shared/guards/login.guard";
             },
 
         ], 
+        
         { 
             
             useHash: true,
@@ -63,9 +69,9 @@ import LoginGuard from "./shared/guards/login.guard";
 
     ],
 
-    declarations: [ AppComponent, HomeComponent, LoginComponent ],
+    declarations: [ AppComponent, LoginComponent ],
 
-    providers: [ AuthService ],
+    providers: [ AuthService, LoginGuard ],
 
     bootstrap: [ AppComponent ],
 

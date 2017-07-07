@@ -11,7 +11,7 @@ export default class AuthService {
 
     IsLogged() {
 
-        return false;
+        return true;
 
     };
 
