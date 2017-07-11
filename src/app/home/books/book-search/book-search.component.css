@@ -1,0 +1,52 @@
+
+.book-search {
+
+    margin: 0;
+
+    padding: 0;
+
+    position: relative;
+
+}
+
+.book-search .book-search-icon { 
+
+    position: absolute;
+
+    top: 13px;
+
+    left: 30px;
+
+    font-size: 21px;
+
+    color: #a3c5ff;
+
+}
+
+.book-search input[type=text] {
+
+    background: none;
+
+    border: none;
+
+    background-color: #2163ce;
+
+    width: 100%;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    padding: 0 15px;
+
+    padding-left: 60px; 
+
+    font-size: 14px;
+
+    line-height: 1em;
+
+    color: #ffffff;
+
+    height: 50px;
+
+}

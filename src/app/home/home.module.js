@@ -27,7 +27,7 @@ import LoginGuard from "../shared/guards/login.guard";
 
     imports: [ 
 
-        BookModule,
+        BookModule,    
 
         RouterModule.forChild([
 

@@ -57,6 +57,8 @@
 
     line-height: 60px;
 
+    outline: none;
+
 }
 
 .sidebar-wrap .sidebar li:hover {

@@ -1,2 +1,26 @@
 
-<div>Books list</div>
+<div class="book-list">
+
+    <book-search></book-search>
+
+    <ul>
+
+        <li class="book" *ngFor="let book of books">
+
+            <span class="current-book"></span>
+
+            <div class="book-info">
+
+                <h3 class="book-title">{{ book.title }}</h3>
+
+                <p class="book-description">{{ book.description }}</p>
+
+            </div>
+
+            <span class="book-date-created">{{ book.dateCreated }}</span>
+
+        </li>
+
+    </ul>
+
+</div>
