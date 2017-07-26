@@ -2,6 +2,8 @@
 import { Component } from '@angular/core';
 
 
+import BookListService from "./book-list.service";
+
 
 @Component({
 
@@ -10,39 +12,29 @@ import { Component } from '@angular/core';
 	styleUrls: [ "./book-list.component.css" ],
 
 })
-
 export default class BookListComponent {
 
-	books = [
+	constructor(bookListService: BookListService) {
 
-		{
+		this._bookListService = bookListService;
 
-			id: 1,
 
-			title: "Book title",
+		this.books = this._bookListService.GetBooks();
 
-			description: "Sample description of the book.",
+	};
 
-			dateCreated: "17:20 July",
+	SelectBook(book) {
 
-			isSelected: false,
+		this.books.forEach(book => book.isSelected = false);
 
-		}, 
+		book.isSelected = true;
 
-		{
+	};
 
-			id: 2,
+	SearchHandler(data) {
 
-			title: "Working files",
+		this.bookSearchQuery = data;
 
-			description: "Sample description of the book.",
-
-			dateCreated: "18:22 July",
-
-			isSelected: false,
-
-		}, 
-
-	];
+	};
 
 }

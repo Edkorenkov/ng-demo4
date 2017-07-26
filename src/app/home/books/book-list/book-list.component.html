@@ -1,13 +1,16 @@
 
 <div class="book-list">
 
-    <book-search></book-search>
+    <book-search (search)="SearchHandler($event)"></book-search>
 
     <ul>
 
-        <li class="book" *ngFor="let book of books">
+        <li class="book" 
+            *ngFor="let book of books | bookSearch:bookSearchQuery"
+            (click)="SelectBook(book);">
 
-            <span class="current-book"></span>
+            <span class="current-book"
+                  [ngClass]="{ 'selected-book': book.isSelected }"></span>
 
             <div class="book-info">
 

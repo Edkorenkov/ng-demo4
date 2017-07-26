@@ -3,6 +3,8 @@
 
     <span class="book-search-icon ion-md-search"></span>
 
-    <input type="text" />
+    <input type="text" 
+           [(ngModel)]="searchQuery"
+           (keyup)="SearchHandler(searchQuery);" />
 
 </div>

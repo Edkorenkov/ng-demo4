@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 
 
@@ -13,4 +13,18 @@ import { Component } from '@angular/core';
 
 })
 
-export default class BookSearchComponent {}
+export default class BookSearchComponent {
+
+	@Output() search = new EventEmitter();
+
+
+	searchQuery = "";
+
+
+	SearchHandler(query) {
+
+		this.search.emit(query);
+
+	};
+
+};

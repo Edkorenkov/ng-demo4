@@ -87,6 +87,12 @@
 
 }
 
+.book .current-book.selected-book {
+
+    background-color: #fffb1c;
+
+}
+
 .book .book-date-created {
 
     position: absolute;
