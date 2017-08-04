@@ -1,4 +1,28 @@
 
+.secondary-sidebar-wrap {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 60px;
+
+    bottom: 0;
+
+    width: 350px;
+
+    background-color: #2979fb;
+
+    color: #ffffff;
+
+}
+
+.content {
+
+    margin-left: 420px; 
+
+}
+
 .book-list ul {
 
     list-style: none;

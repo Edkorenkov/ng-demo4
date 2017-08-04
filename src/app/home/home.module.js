@@ -11,11 +11,13 @@ import HomeComponent from "./home.component";
 
 import SidebarComponent from "./sidebar/sidebar.component";
 
-import SecondarySidebarComponent from "./secondary-sidebar/secondary-sidebar.component";
-
 import BookListComponent from "./books/book-list/book-list.component";
 
 import BookCreateComponent from "./books/book-create/book-create.component";
+
+import BookPagesComponent from "./books/book-pages/book-pages.component";
+
+import PageComponent from "./books/book-pages/page/page.component";
 
 
 import AuthService from "../shared/auth.service";
@@ -27,7 +29,7 @@ import LoginGuard from "../shared/guards/login.guard";
 
     imports: [ 
 
-        BookModule,    
+        BookModule,
 
         RouterModule.forChild([
 
@@ -42,14 +44,34 @@ import LoginGuard from "../shared/guards/login.guard";
                 children: [
 
                     {
-                        path: "books", component: BookListComponent,
-                    },
 
-                    {
-                        path: "books/create", component: BookCreateComponent,
-                    },
+                        path: "books",
 
-                ]
+                        component: BookListComponent,
+
+                        children: [
+
+                            {
+
+                                path: ":bookId/pages",
+
+                                component: BookPagesComponent,
+                            
+                            },
+
+                            {
+
+                                path: ":bookId/page/:pageId",
+
+                                component: PageComponent,
+
+                            }
+
+                        ]
+
+                    } 
+
+                ],
                 
             },
 
@@ -57,7 +79,7 @@ import LoginGuard from "../shared/guards/login.guard";
 
     ],
 
-    declarations: [ HomeComponent, SidebarComponent, SecondarySidebarComponent ],
+    declarations: [ HomeComponent, SidebarComponent ],
 
     providers: [ AuthService, LoginGuard ],
 

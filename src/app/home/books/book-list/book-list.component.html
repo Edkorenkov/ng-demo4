@@ -1,29 +1,40 @@
 
-<div class="book-list">
+<div class="secondary-sidebar-wrap">
 
-    <book-search (search)="SearchHandler($event)"></book-search>
+    <div class="book-list">
 
-    <ul>
+        <book-search (search)="SearchHandler($event)"></book-search>
 
-        <li class="book" 
-            *ngFor="let book of books | bookSearch:bookSearchQuery"
-            (click)="SelectBook(book);">
+        <ul>
 
-            <span class="current-book"
-                  [ngClass]="{ 'selected-book': book.isSelected }"></span>
+            <li class="book" 
+                *ngFor="let book of books | bookSearch:bookSearchQuery"
+                (click)="SelectBook(book);"
+                [routerLink]="['/home/books', book.id, 'pages']">
 
-            <div class="book-info">
+                <span class="current-book"
+                    [ngClass]="{ 'selected-book': book.isSelected }"></span>
 
-                <h3 class="book-title">{{ book.title }}</h3>
+                <div class="book-info">
 
-                <p class="book-description">{{ book.description }}</p>
+                    <h3 class="book-title">{{ book.title }}</h3>
 
-            </div>
+                    <p class="book-description">{{ book.description }}</p>
 
-            <span class="book-date-created">{{ book.dateCreated }}</span>
+                </div>
 
-        </li>
+                <span class="book-date-created">{{ book.dateCreated }}</span>
 
-    </ul>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="content">
+
+    <router-outlet></router-outlet>
 
 </div>

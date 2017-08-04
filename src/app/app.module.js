@@ -27,16 +27,6 @@ import LoginComponent from "./login/login.component";
 
         RouterModule.forRoot([
 
-            // {
-
-            //     path: "home",
-
-            //     component: HomeComponent,
-
-            //     canActivate: [ LoginGuard ],
-
-            // },
-
             {
 
                 path: "login",

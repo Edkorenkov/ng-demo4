@@ -18,8 +18,13 @@ export default class BookListComponent {
 
 		this._bookListService = bookListService;
 
+		this.books = [];
 
-		this.books = this._bookListService.GetBooks();
+	};
+
+	ngOnInit() {
+
+		this._bookListService.GetBooks().subscribe(book => this.books.push(book));
 
 	};
 

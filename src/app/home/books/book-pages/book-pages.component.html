@@ -1,0 +1,18 @@
+
+<div>
+
+    
+
+</div>
+
+<ul class="book-pages">
+
+    <li class="page"
+        *ngFor="let page of pages"
+        [routerLink]="['/home/books', bookId, 'page', page.id]">
+
+        <h3>{{ page.title }}</h3>
+
+    </li>
+
+</ul>
