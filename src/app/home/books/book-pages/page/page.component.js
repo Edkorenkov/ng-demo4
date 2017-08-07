@@ -11,6 +11,8 @@ import PageService from "./page.service";
 
     templateUrl: "./page.component.html",
 
+    styleUrls: [ "./page.component.css" ],
+
 })
 
 export default class PageComponent {

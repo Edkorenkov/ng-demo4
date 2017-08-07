@@ -1,13 +1,30 @@
 
-<div>
+<div class="container is-fluid">
 
-    <h4>{{ page?.creator.name }}</h4>
+    <div class="columns">
 
-    <div>{{ page?.dateCreated }}</div>
-    
-    <h3>{{ page?.title }}</h3>
+        <div class="column">
 
-    <p>{{ page?.text }}</p>
+            <h4>{{ page?.creator.name }}</h4>
+
+        </div>
+
+        <div class="column">
+
+            <p>{{ page?.dateCreated }}</p>
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <h3 class="title is-3">{{ page?.title }}</h3>
+
+        <p>{{ page?.text }}</p>
+
+    </div>
     
 
 </div>
