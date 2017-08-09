@@ -55,6 +55,16 @@ export default class BookPagesService {
 
         }, 
 
+        {
+
+            id: 5,
+
+            bookId: 1,
+
+            title: "Page tree from Book 1",
+
+        }, 
+
     ];
     
     GetPagesByBookId(bookId) {

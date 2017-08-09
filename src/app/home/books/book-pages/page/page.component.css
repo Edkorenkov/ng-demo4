@@ -1,0 +1,113 @@
+
+.page-editor {
+
+
+
+}
+
+.page-editor h5 { 
+
+    margin: 0;
+
+    margin-bottom: 20px;
+
+}
+
+.page-editor .editor-controls {
+
+    padding: 0 0 30px 0;
+
+}
+
+.page-editor .editor-controls span {
+
+    font-size: 1.4em;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    padding: 0 10px;
+
+    cursor: pointer;
+
+}
+
+.editor-controls .controls-back {
+
+    text-align: left;
+
+}
+
+.editor-controls .controls-nav {
+
+    text-align: center;
+
+}
+
+.editor-controls .controls-actions {
+
+    text-align: right;
+
+}
+
+.page-editor .editor-content {
+
+
+
+}
+
+.editor-content input[type="text"] {
+
+    border: none;
+
+    background: none;
+
+    width: 100%;
+
+    outline: none;
+
+    font-size: 24px;
+
+    padding: 15px 0;
+
+    margin: 0;
+
+}
+
+
+.editor-content textarea {
+
+    border: none;
+
+    background: none;
+
+    width: 100%;
+
+    outline: none;
+
+    font-size: 1em;
+
+    font-weight: 300;
+
+    padding: 0;
+
+    padding-right: 15px;
+
+    font-family: 'Roboto', sans-serif;
+
+    overflow: hidden;
+
+    overflow-y: auto;
+
+    line-height: 2.5rem;
+
+    color: #606c76;
+
+    resize: none;
+
+    margin: 0;
+
+    min-height: 250px;
+
+}

@@ -1,28 +1,77 @@
 
-<div class="container is-fluid">
+<div class="container page-editor">
 
-    <div class="columns">
+    <div class="editor-controls">
 
-        <div class="column">
+        <div class="row">
 
-            <h4>{{ page?.creator.name }}</h4>
+            <div class="column controls-back">
 
-        </div>
+                <span class="ion-ios-undo"
+                      (click)="OnBack(page);"></span>
 
-        <div class="column">
+            </div>
 
-            <p>{{ page?.dateCreated }}</p>
+            <div class="row controls-nav">
+
+                <div class="column nav-left">
+
+                    <span class="ion-md-arrow-back"
+                          (click)="OnPrevPage(page);"></span>
+                    
+                </div>
+
+                <div class="column nav-right">
+
+                    <span class="ion-md-arrow-forward"
+                          (click)="OnNextPage(page);"></span>
+
+                </div>
+
+            </div>
+
+            <div class="column controls-actions">
+
+                <span class="ion-md-checkmark"></span>
+
+                <span class="ion-md-trash"></span>
+
+            </div>
 
         </div>
 
     </div>
 
-
     <div>
 
-        <h3 class="title is-3">{{ page?.title }}</h3>
+        <h5>{{ page?.dateCreated }}</h5>
 
-        <p>{{ page?.text }}</p>
+    </div>
+
+    <div class="editor-content">
+
+        <div class="row">
+
+            <div class="column">
+
+                <input type="text" 
+                       placeholder="Create title..."
+                       [(ngModel)]="page.title" />
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+
+                <textarea placeholder="Write your ideas here..."
+                          [(ngModel)]="page.text"></textarea>
+
+            </div>
+
+        </div>
 
     </div>
     
