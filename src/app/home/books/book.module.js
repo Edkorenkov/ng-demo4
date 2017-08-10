@@ -30,6 +30,9 @@ import PageComponent from "./book-pages/page/page.component";
 import PageCreateComponent from "./book-pages/page/page-create.component";
 
 
+import PageTextareaResizerDirective from "./book-pages/page/page-textarea-resizer.directive";
+
+
 @NgModule({
 
     imports: [
@@ -56,7 +59,9 @@ import PageCreateComponent from "./book-pages/page/page-create.component";
 
         PageCreateComponent,
         
-        BookListPipe
+        BookListPipe,
+
+        PageTextareaResizerDirective
     
     ],
 

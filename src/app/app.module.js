@@ -11,6 +11,8 @@ import HomeModule from "./home/home.module";
 
 import AppComponent from "./app.component";
 
+import AppWindowRef from "./app-window.service";
+
 import HomeComponent from "./home/home.component";
 
 import LoginComponent from "./login/login.component";
@@ -57,7 +59,15 @@ import LoginComponent from "./login/login.component";
 
     declarations: [ AppComponent, LoginComponent ],
 
-    providers: [  ],
+    providers: [ 
+
+        {
+
+            provide: AppWindowRef, useValue: window,
+
+        }
+
+    ],
 
     bootstrap: [ AppComponent ],
 

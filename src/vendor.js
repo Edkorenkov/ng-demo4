@@ -12,4 +12,6 @@ import "@angular/router";
 import "@angular/forms";
 
 
+import "jquery";
+
 import "rxjs";
