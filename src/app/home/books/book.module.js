@@ -27,6 +27,8 @@ import BookPagesComponent from "./book-pages/book-pages.component";
 
 import PageComponent from "./book-pages/page/page.component";
 
+import PageCreateComponent from "./book-pages/page/page-create.component";
+
 
 @NgModule({
 
@@ -51,6 +53,8 @@ import PageComponent from "./book-pages/page/page.component";
         BookPagesComponent,
 
         PageComponent,
+
+        PageCreateComponent,
         
         BookListPipe
     

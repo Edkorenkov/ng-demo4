@@ -19,6 +19,8 @@ import BookPagesComponent from "./books/book-pages/book-pages.component";
 
 import PageComponent from "./books/book-pages/page/page.component";
 
+import PageCreateComponent from "./books/book-pages/page/page-create.component";
+
 
 import AuthService from "../shared/auth.service";
 
@@ -61,11 +63,19 @@ import LoginGuard from "../shared/guards/login.guard";
 
                             {
 
+                                path: ":bookId/page/create",
+
+                                component: PageCreateComponent,
+
+                            },
+
+                            {
+
                                 path: ":bookId/page/:pageId",
 
                                 component: PageComponent,
 
-                            }
+                            },
 
                         ]
 

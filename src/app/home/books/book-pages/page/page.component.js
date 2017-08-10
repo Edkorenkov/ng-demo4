@@ -37,8 +37,6 @@ export default class PageComponent {
 
                 this.page = page;
 
-                console.log(this.page);
-
             });
 
     };
@@ -69,7 +67,7 @@ export default class PageComponent {
 
         if (page.nextPageId < 0) {
 
-            this._router.navigate(["/home/books", page.bookId, "pages"]);
+            this._router.navigate(["/home/books", page.bookId, "page", "create"]);
 
             return;
 
