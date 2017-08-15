@@ -1,45 +1,40 @@
 
-import { Component } from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 import { Router, ActivatedRoute } from "@angular/router";
 
 
-import PageService from "./page.service";
-
-
 @Component({
 
-    templateUrl: "./page.component.html",
+    selector: "page-controls",
 
-    styleUrls: [ "./page.component.css" ],
+    templateUrl: "./page-controls.component.html",
+
+    styleUrls: [
+
+        "./page-controls.component.css",
+
+    ],
 
 })
 
-export default class PageComponent {
+export default class PageControlsComponent {
 
-    constructor(route: ActivatedRoute, router: Router, pageService: PageService) {
+    @Input() page;
+
+    @Input() isEnableNavigationControls;
+
+    constructor(route: ActivatedRoute, router: Router) {
 
         this._router = router;
 
         this._route = route;
 
-        this._pageService = pageService;
+    };
 
-    }
+    ngOnChanges(changes) {
 
-    ngOnInit() {
-
-        this._route.params
-        
-            .switchMap(params => this._pageService.GetPageById(+params["pageId"]))
-
-            .subscribe(page => {
-
-                this.page = page;
-
-            });
-
-        this.isEnableNavigationControls = true;
+        console.log(changes);
 
     };
 
@@ -81,4 +76,4 @@ export default class PageComponent {
 
     };
 
-}
+};

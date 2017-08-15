@@ -1,6 +1,9 @@
 
 <div class="container page-editor">
 
+    <page-controls [page]="page"
+                   [isEnableNavigationControls]="isEnableNavigationControls"></page-controls>
+
     <div>
 
         <h5>{{ page?.dateCreated }}</h5>

@@ -52,6 +52,8 @@ export default class PageCreateComponent {
 
             });
 
+        this.isEnableNavigationControls = false;
+
     };
 
 };

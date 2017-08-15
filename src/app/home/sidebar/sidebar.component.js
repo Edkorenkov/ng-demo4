@@ -13,4 +13,6 @@ import { Component } from '@angular/core';
 
 })
 
-export default class SidebarComponent {}
+export default class SidebarComponent {
+
+};

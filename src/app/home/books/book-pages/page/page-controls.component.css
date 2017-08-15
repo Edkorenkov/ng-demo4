@@ -1,0 +1,37 @@
+.editor-controls {
+
+    padding: 0 0 30px 0;
+
+}
+
+.editor-controls span {
+
+    font-size: 1.4em;
+
+    cursor: pointer;
+
+    display: inline-block;
+
+    padding: 0 10px;
+
+    cursor: pointer;
+
+}
+
+.editor-controls .controls-back {
+
+    text-align: left;
+
+}
+
+.editor-controls .controls-nav {
+
+    text-align: center;
+
+}
+
+.editor-controls .controls-actions {
+
+    text-align: right;
+
+}

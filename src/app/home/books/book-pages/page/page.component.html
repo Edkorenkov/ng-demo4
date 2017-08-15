@@ -1,46 +1,8 @@
 
 <div class="container page-editor">
 
-    <div class="editor-controls">
-
-        <div class="row">
-
-            <div class="column controls-back">
-
-                <span class="ion-ios-undo"
-                      (click)="OnBack(page);"></span>
-
-            </div>
-
-            <div class="row controls-nav">
-
-                <div class="column nav-left">
-
-                    <span class="ion-md-arrow-back"
-                          (click)="OnPrevPage(page);"></span>
-                    
-                </div>
-
-                <div class="column nav-right">
-
-                    <span class="ion-md-arrow-forward"
-                          (click)="OnNextPage(page);"></span>
-
-                </div>
-
-            </div>
-
-            <div class="column controls-actions">
-
-                <span class="ion-md-checkmark"></span>
-
-                <span class="ion-md-trash"></span>
-
-            </div>
-
-        </div>
-
-    </div>
+    <page-controls [page]="page"
+                   [isEnableNavigationControls]="isEnableNavigationControls"></page-controls>
 
     <div>
 
@@ -67,8 +29,7 @@
             <div class="column">
 
                 <textarea placeholder="Write your ideas here..."
-                          [(ngModel)]="page.text"
-                           textareaResizer></textarea>
+                          [(ngModel)]="page.text"></textarea>
 
             </div>
 

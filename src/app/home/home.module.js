@@ -79,7 +79,7 @@ import LoginGuard from "../shared/guards/login.guard";
 
                         ]
 
-                    } 
+                    },
 
                 ],
                 

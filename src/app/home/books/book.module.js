@@ -29,6 +29,8 @@ import PageComponent from "./book-pages/page/page.component";
 
 import PageCreateComponent from "./book-pages/page/page-create.component";
 
+import PageControlsComponent from "./book-pages/page/page-controls.component";
+
 
 import PageTextareaResizerDirective from "./book-pages/page/page-textarea-resizer.directive";
 
@@ -58,6 +60,8 @@ import PageTextareaResizerDirective from "./book-pages/page/page-textarea-resize
         PageComponent,
 
         PageCreateComponent,
+
+        PageControlsComponent,
         
         BookListPipe,
 

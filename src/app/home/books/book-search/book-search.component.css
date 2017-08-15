@@ -54,3 +54,9 @@
     font-family: 'Roboto', sans-serif;
 
 }
+
+.book-search input[type=text]::-webkit-input-placeholder {
+
+    color: #a3c5ff;
+
+}

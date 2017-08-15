@@ -5,6 +5,15 @@
 
         <book-search (search)="SearchHandler($event)"></book-search>
 
+        <div class="book-create"
+             (click)="CreateBook();">
+
+            <span class="ion-md-add create-icon"></span>
+
+            <span>Create New Book</span>
+
+        </div>
+
         <ul>
 
             <li class="book" 

@@ -9,7 +9,13 @@ import BookListService from "./book-list.service";
 
 	templateUrl: "./book-list.component.html",
 
-	styleUrls: [ "./book-list.component.css" ],
+	styleUrls: [ 
+		
+		"./book-list.component.css",
+	
+		"../shared/secondary-sidebar.component.css"
+
+	],
 
 })
 export default class BookListComponent {
@@ -39,6 +45,12 @@ export default class BookListComponent {
 	SearchHandler(data) {
 
 		this.bookSearchQuery = data;
+
+	};
+
+	CreateBook() {
+
+		console.log("new book will be created");
 
 	};
 

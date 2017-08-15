@@ -1,27 +1,41 @@
 
-.secondary-sidebar-wrap {
-
-    position: fixed;
-
-    top: 0;
-
-    left: 60px;
-
-    bottom: 0;
-
-    width: 350px;
-
-    background-color: #2979fb;
-
-    color: #ffffff;
-
-}
-
 .content {
 
     margin-left: 410px; 
 
     margin-top: 10px; 
+
+}
+
+.book-list .book-create {
+
+    padding: 15px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    border-bottom: 1px solid #1764E2;
+
+    background-color: #1b69e8;
+
+    color: #a3c5ff;
+
+}
+
+.book-list .book-create:hover {
+
+    color: #ffffff;
+
+}
+
+.book-list .book-create .create-icon {
+
+    display: inline-block;
+
+    padding: 0 15px;
+
+    font-size: 16px;
 
 }
 
@@ -52,6 +66,8 @@
     height: 70px;
 
     cursor: pointer;
+
+    outline: none;
 
 }
 
