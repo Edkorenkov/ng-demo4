@@ -19,8 +19,6 @@ import BookListPipe from "./book-list/book-list.pipe";
 
 import BookListComponent from "./book-list/book-list.component";
 
-import BookCreateComponent from "./book-create/book-create.component";
-
 import BookSearchComponent from "./book-search/book-search.component";
 
 import BookPagesComponent from "./book-pages/book-pages.component";
@@ -50,8 +48,6 @@ import PageTextareaResizerDirective from "./book-pages/page/page-textarea-resize
     declarations: [ 
         
         BookListComponent,
-        
-        BookCreateComponent, 
         
         BookSearchComponent, 
 

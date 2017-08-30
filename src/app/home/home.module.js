@@ -13,8 +13,6 @@ import SidebarComponent from "./sidebar/sidebar.component";
 
 import BookListComponent from "./books/book-list/book-list.component";
 
-import BookCreateComponent from "./books/book-create/book-create.component";
-
 import BookPagesComponent from "./books/book-pages/book-pages.component";
 
 import PageComponent from "./books/book-pages/page/page.component";

@@ -27,6 +27,8 @@ export default class BookListService {
 
             isSelected: false,
 
+            isNewer: false,
+
         }, 
 
         {
@@ -41,6 +43,8 @@ export default class BookListService {
 
             isSelected: false,
 
+            isNewer: false,
+
         }, 
 
     ];
@@ -48,6 +52,38 @@ export default class BookListService {
     GetBooks() {
 
         return Rx.Observable.from(this.books);
+
+    };
+
+    GetLastBook(books) {
+
+        return books[books.length - 1];
+
+    };
+
+    GetLastEmptyBook(books) {
+
+        return books.find(book => book.isNewer);
+
+    };
+
+    CreateEmptyBook() {
+
+        return {
+            
+            id: 0,
+
+            title: "",
+
+            description: "",
+
+            dateCreated: "15:42 August",
+
+            isSelected: false,
+
+            isNewer: true,
+
+        };
 
     };
 
