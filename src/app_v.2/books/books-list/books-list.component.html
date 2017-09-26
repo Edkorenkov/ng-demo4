@@ -1,0 +1,58 @@
+
+<div class="book-list">
+
+    <div class="book-create"
+         (click)="onCreateBook.emit();">
+
+        <span class="ion-md-add create-icon"></span>
+
+        <span>Create New Book</span>
+
+    </div>
+
+    <ul>
+
+        <li class="book"
+            *ngFor="let book of books | bookSearch:searchQuery"
+            (click)="onSelectBook.emit(book)"
+            [ngClass]="{ 'editable-book': !!book.isNewer }"
+            [routerLink]="['/books', book.id, 'pages']">
+
+            <span class="current-book"
+                  [ngClass]="{ 'selected-book': book.isSelected }"></span>
+
+            <div class="book-info">
+                    
+                <div *ngIf="!book.isNewer">
+
+                    <h3 class="book-title">{{ book.title }}</h3>
+
+                </div>
+
+                <div *ngIf="!!book.isNewer">
+                    
+                    <input type="text"
+                           class="book-edit-title" 
+                           placeholder="Book title..."
+                           [(ngModel)]="book.title" />
+
+                </div>
+
+            </div>
+
+            <span class="book-date-created"
+                  *ngIf="!book.isNewer">{{ book.dateCreated }}</span>
+
+            <span class="editable-book-controls control-save ion-md-checkmark"
+                  *ngIf="!!book.isNewer"
+                  (click)="onSaveEmptyBook.emit(book);"></span>
+                
+            <span class="editable-book-controls control-discard ion-md-trash"
+                  *ngIf="!!book.isNewer"
+                  (click)="onDiscardEmptyBook.emit(book);"></span>
+
+        </li>
+
+    </ul>
+
+</div>

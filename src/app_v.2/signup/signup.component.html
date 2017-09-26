@@ -1,0 +1,42 @@
+
+<div class="row">
+
+    <div class="column column-60"><h4>Sign up</h4></div>
+
+    <div class="column column-40" style="min-height: 100vh;">
+
+        <div style="display: table; height: 100%; width: 100%;">
+
+            <div style="display: table-cell; vertical-align: middle;">
+
+                <form [formGroup]="user" (ngSubmit)="OnSubmit(user.value);">
+
+                    <p>Create Your account</p>
+
+                    <div>
+
+                        <label for="user-name">User Name</label>
+
+                        <input id="user-name" type="text" formControlName="name" />
+
+                    </div>
+
+                    <div>
+
+                        <label for="password">Password</label>
+
+                        <input id="password" type="password" formControlName="password" />
+
+                    </div>
+
+                    <input type="submit" value="Sign up" />
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

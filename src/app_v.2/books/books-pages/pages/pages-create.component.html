@@ -1,0 +1,40 @@
+
+<div class="container page-editor">
+
+    <pages-controls [page]="page"
+                   [isEnableNavigationControls]="isEnableNavigationControls"></pages-controls>
+
+    <div>
+
+        <h5>{{ page?.dateCreated }}</h5>
+
+    </div>
+
+    <div class="editor-content">
+
+        <div class="row">
+
+            <div class="column">
+
+                <input type="text" 
+                       placeholder="Create title..."
+                       [(ngModel)]="page.title" />
+
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+
+                <textarea placeholder="Write your ideas here..."
+                          [(ngModel)]="page.text"></textarea>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

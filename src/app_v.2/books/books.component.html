@@ -1,0 +1,18 @@
+
+<sidebar></sidebar>
+
+<div class="books-sidebar">
+    
+    <books-search (onSearch)="SearchBook($event)"></books-search>
+    
+    <books-list [books]="books"
+                [searchQuery]="searchBookQuery"
+                (onSelectBook)="SelectBook($event)"
+                (onCreateBook)="CreateEmptyBook($event)"
+                (onSaveEmptyBook)="SaveEmptyBook($event)"
+                (onDiscardEmptyBook)="DiscardEmptyBook($event)"></books-list>
+
+</div>
+
+<router-outlet></router-outlet>
+

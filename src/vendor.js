@@ -12,6 +12,10 @@ import "@angular/router";
 import "@angular/forms";
 
 
+import "auth0-js";
+
+import "auth0-lock";
+
 import "jquery";
 
 import "rxjs";
